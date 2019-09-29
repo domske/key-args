@@ -1,6 +1,6 @@
 {
   "name": "key-args",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "A super lightweight argument parser for NodeJs. Zero dependencies. Simply works.",
   "main": "args.js",
   "scripts": {

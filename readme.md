@@ -35,7 +35,10 @@ const args = require('node-args')(config);
 
 ```js
 // The most common way to simply get the arguments.
+// $ node demo.js --message="Hello World" --id=42 -D
 const args = require('node-args')();
+
+// Result: { message: 'Hello World', id: 42, D: true }
 ```
 
 ```js
