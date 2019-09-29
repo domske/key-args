@@ -5,7 +5,7 @@ A super lightweight argument parser for NodeJs. Zero dependencies. Simply works.
 ## Install
 
 ```text
-npm i node-args
+npm i key-args
 ```
 
 ## Usage
