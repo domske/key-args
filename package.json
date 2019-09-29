@@ -1,0 +1,22 @@
+{
+  "name": "key-args",
+  "version": "1.0.0",
+  "description": "A super lightweight argument parser for NodeJs. Zero dependencies. Simply works.",
+  "main": "args.js",
+  "scripts": {
+    "test": "node test.js -D --name=\"Hello World\" --path='c:/temp' --answer=42 --as=\"one=two\""
+  },
+  "keywords": [
+    "node",
+    "args",
+    "argv",
+    "arguments",
+    "parameter",
+    "parse"
+  ],
+  "author": {
+    "name": "Dominik-Andreas Geng",
+    "url": "https://github.com/domske"
+  },
+  "license": "MIT"
+}
