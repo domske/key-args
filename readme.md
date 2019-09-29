@@ -4,6 +4,8 @@ A super lightweight argument parser for NodeJs. Zero dependencies. Simply works.
 
 ## Install
 
+Available on [NPM](https://www.npmjs.com/package/key-args).
+
 ```text
 npm i key-args
 ```
