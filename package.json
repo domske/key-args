@@ -1,6 +1,6 @@
 {
   "name": "key-args",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A super lightweight argument parser for NodeJs. Zero dependencies. Simply works.",
   "main": "args.js",
   "scripts": {
@@ -18,5 +18,9 @@
     "name": "Dominik-Andreas Geng",
     "url": "https://github.com/domske"
   },
-  "license": "MIT"
+  "license": "MIT",
+  "repository": {
+    "url": "https://github.com/domske/key-args",
+    "type": "git"
+  }
 }
