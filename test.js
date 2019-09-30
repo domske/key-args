@@ -12,6 +12,12 @@ const test = (name, callback) => {
 };
 
 const compare = (a, b) => {
+  const aKeys = Object.keys(a);
+  const bKeys = Object.keys(b);
+  if (aKeys.length !== bKeys.length) {
+    throw new Error(`The number of properties are not equal.`);
+  }
+
   for (const key in b) {
     if (a[key] !== b[key]) {
       throw new Error(
@@ -79,6 +85,26 @@ test('Simple parameters.', () => {
       one: 1,
       two: 2,
       three: 3
+    }
+  );
+});
+
+test('Regex start-end.', () => {
+  compare(
+    args({
+      args: ['test-app']
+    }),
+    {}
+  );
+});
+
+test('Regex start-end 2.', () => {
+  compare(
+    args({
+      args: ['--test-app']
+    }),
+    {
+      'test-app': true
     }
   );
 });

@@ -1,6 +1,6 @@
 const REGEX = {
   /** Matches the argument by `-key=value` */
-  ARG: /--?([^=\s]+)=?(.*)?/
+  ARG: /^--?([^=\s]+)=?(.*)?$/
 };
 
 /**
