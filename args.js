@@ -1,6 +1,6 @@
 const REGEX = {
   /** Matches the argument by `-key=value` */
-  ARG: /^--?([^=\s]+)=?(.*)?$/
+  ARG: /^--?([^=\s]+)=?(.*)?$/,
 };
 
 /**
@@ -55,7 +55,7 @@ const parseValue = (value, keyParser, key) => {
 const defaultConfig = {
   autoParse: true,
   keyParser: null,
-  args: null
+  args: null,
 };
 
 /**
@@ -70,11 +70,11 @@ const defaultConfig = {
  * @param {Config} [config] A optional configuration.
  * @returns {{[key: string]: any}} Object with the arguments key-value.
  */
-module.exports = config => {
+module.exports = (config) => {
   config = Object.assign({}, defaultConfig, config);
   const args = config.args || process.argv.slice(2);
   const obj = {};
-  args.forEach(arg => {
+  args.forEach((arg) => {
     const matches = arg.match(REGEX.ARG);
     if (!matches) {
       // No matches. Skip...

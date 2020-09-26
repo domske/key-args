@@ -1,6 +1,6 @@
 {
   "name": "key-args",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "A super lightweight argument parser for NodeJs. Zero dependencies. Simply works.",
   "main": "args.js",
   "scripts": {
@@ -12,7 +12,9 @@
     "argv",
     "arguments",
     "parameter",
-    "parse"
+    "parse",
+    "key",
+    "keys"
   ],
   "author": {
     "name": "Dominik-Andreas Geng",
@@ -22,5 +24,8 @@
   "repository": {
     "url": "https://github.com/domske/key-args",
     "type": "git"
-  }
+  },
+  "files": [
+    "args.js"
+  ]
 }

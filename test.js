@@ -35,7 +35,7 @@ test('Default settings.', () => {
     name: 'Hello World',
     path: "'c:/temp'",
     answer: 42,
-    as: 'one=two'
+    as: 'one=two',
   });
 });
 
@@ -45,7 +45,7 @@ test('No auto value parser.', () => {
     name: 'Hello World',
     path: "'c:/temp'",
     answer: '42',
-    as: 'one=two'
+    as: 'one=two',
   });
 });
 
@@ -54,11 +54,11 @@ test('Custom value parser. (Date)', () => {
     args({
       args: ['-date=2019-09-30T12:00:00.000Z'],
       keyParser: {
-        date: value => new Date(value).getTime()
-      }
+        date: (value) => new Date(value).getTime(),
+      },
     }),
     {
-      date: 1569844800000
+      date: 1569844800000,
     }
   );
 });
@@ -66,12 +66,12 @@ test('Custom value parser. (Date)', () => {
 test('Space parameter. (not supported)', () => {
   compare(
     args({
-      args: ['-one', '1', '-two', '2', '-three', '3']
+      args: ['-one', '1', '-two', '2', '-three', '3'],
     }),
     {
       one: true,
       two: true,
-      three: true
+      three: true,
     }
   );
 });
@@ -79,12 +79,12 @@ test('Space parameter. (not supported)', () => {
 test('Simple parameters.', () => {
   compare(
     args({
-      args: ['-one=1', '-two=2', '-three=3']
+      args: ['-one=1', '-two=2', '-three=3'],
     }),
     {
       one: 1,
       two: 2,
-      three: 3
+      three: 3,
     }
   );
 });
@@ -92,7 +92,7 @@ test('Simple parameters.', () => {
 test('Regex start-end.', () => {
   compare(
     args({
-      args: ['test-app']
+      args: ['test-app'],
     }),
     {}
   );
@@ -101,10 +101,10 @@ test('Regex start-end.', () => {
 test('Regex start-end 2.', () => {
   compare(
     args({
-      args: ['--test-app']
+      args: ['--test-app'],
     }),
     {
-      'test-app': true
+      'test-app': true,
     }
   );
 });
